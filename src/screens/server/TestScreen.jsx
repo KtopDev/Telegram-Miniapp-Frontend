@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { AppBar, Tab, Tabs, Card, CardContent, Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { FaBeer } from "react-icons/fa";
+import { GoAlertFill, GoShieldCheck, GoSync } from "react-icons/go";
+import {GiCircularSawblade } from "react-icons/gi";
 
 const tabsData1 = [
   { label: 'Featured', title: "Launch with Notcoin", content: 'Submit project for Notcoin Explore.', image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEQePG8HgyJ7Ii7d8CFdHcJsdryUVjx31NlQ&s"},
@@ -50,13 +53,18 @@ class BitcoinAds extends Component {
             </Link>
             
             <Typography variant="h5" style={{ marginTop: '10px' }}>
+            <GoAlertFill size={25} style={{color: '#d1d114',marginRight: '15px'}} /> Notcoin
+            <GoShieldCheck size={20} style={{color: '#1d7af3', marginLeft: '10px'}} />
+            </Typography>
+            
+            <Typography variant="h5" style={{ marginTop: '10px' }}>
               {tabsData1[this.state.selectedTab].title}
             </Typography>
             <Typography variant="h7" style={{ marginTop: '10px' }}>
               {tabsData1[this.state.selectedTab].content}
             </Typography>
             <Button variant="contained" color="primary" style={{ marginTop: '10px', borderRadius: '10px', background: '#f0f0f5', color: 'black' }}>
-              Start Your Campaign
+            <GoAlertFill size={25} style={{color: 'black',marginRight: '15px'}} />Start Your Campaign
             </Button>
           </CardContent>
         </Card>
@@ -69,13 +77,14 @@ class BitcoinAds extends Component {
             </Link>
             
             <Typography variant="h5" style={{ marginTop: '10px' }}>
-              {tabsData2[this.state.selectedTab].title}
+            <GoSync size={25} style={{color: '#1d7af3', marginRight: '10px'}} />{tabsData2[this.state.selectedTab].title}
+            <GoShieldCheck size={15} style={{color: '#1d7af3', marginLeft: '10px'}} />
             </Typography>
             <Typography variant="h7" style={{ marginTop: '10px' }}>
               {tabsData2[this.state.selectedTab].content}
             </Typography>
             <Button variant="contained" color="primary" style={{ marginTop: '10px', borderRadius: '10px', background: '#f0f0f5', color: 'black' }}>
-              Start Your Campaign
+                <GiCircularSawblade  size={25} style={{color: '#1d7af3', marginRight: '10px'}} />Chance to win $FTON IDO Allocation
             </Button>
           </CardContent>
         </Card>
